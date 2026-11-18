@@ -1,0 +1,16 @@
+{
+  "pages": 102,
+  "biologyTopics": 918,
+  "products": 131,
+  "associations": 153,
+  "unmatchedMethods": 426,
+  "sourceRecords": 2083,
+  "checks": [
+    "Original biology, methods, product configurations, sources and source dates preserved",
+    "Nine summaries and expanded details per page",
+    "All products associated with methods and canonical anchors preserved",
+    "Every local target/source/product link resolves; no duplicate anchors",
+    "Static HTML matches the shared renderer",
+    "Existing APJ/CALCR reading content and mechanism flows preserved"
+  ]
+}

@@ -1,0 +1,43 @@
+Use case: scientific-educational.
+Asset: final raster mechanism map for the CALCR / AMY3 Target Biology page of a Chinese scientific reference website.
+Create an original, publication-quality scientific mechanism illustration with ALL Chinese and Latin labels rendered directly inside the image. Landscape 4:3, high resolution, crisp large readable sans-serif text. Style: clean flat biomedical editorial illustration, restrained dimensional shading on proteins, warm white background #fcfdf9, forest teal #386c60, sage green, muted blue #456e97, amber #b26739. Lots of space; no website interface, no branding, no watermark, no invented experimental data.
+
+TITLE exact: "CALCR / AMY3 机制图"
+SUBTITLE exact: "先确认受体组合，再解释信号与生理功能"
+
+UPPER HALF: draw a clearly labeled horizontal phospholipid bilayer "细胞膜"; upper space "胞外", lower "胞内".
+Draw two DISTINCT receptor contexts side by side:
+LEFT: a seven-transmembrane-helical B1 GPCR with an extracellular domain, clearly labeled "CALCR / CTR" and "降钙素受体核心". Above, a peptide "降钙素" binds this receptor. Small annotation "无需 RAMP 也可响应".
+RIGHT: another seven-transmembrane CALCR core plus an adjacent single-transmembrane accessory protein RAMP3, forming one complex. Label the main seven-helix core "CALCR", label the single-pass accessory "RAMP3", use a bracket encompassing BOTH and label "AMY3 = CALCR + RAMP3". Above this complex a peptide "胰淀素 / IAPP" with binding arrow. Small annotation "RAMP3 调整配体识别与信号".
+Important anatomy: CALCR is seven-transmembrane, RAMP3 is ONE-transmembrane; AMY3 is a complex, not a separate eight-helix receptor and not a distinct gene.
+
+MIDDLE: solid arrows from BOTH contexts converge on shared main signaling pathway:
+"Gs" → "腺苷酸环化酶" → "cAMP 升高"
+All are activation arrows, NEVER inhibition. Beneath: "共同的主要信号入口".
+Separate small dashed optional branch text "Gq / PLC / Ca²⁺、ERK：依赖细胞背景与配体".
+Separate subtle blue annotation with small trafficking vesicle icon "剪接体、组装比例、膜定位与内化共同影响信号时程".
+Another smaller annotation "β-arrestin 招募 ≠ 受体内化".
+Do not show obligatory beta-arrestin-dependent internalization or a universal RAMP3 recycling pathway.
+
+A concise comparison strip of two clearly separated boxes:
+Green box heading "CALCR 与 RAMP 配对" with exact lines "CALCR + RAMP1 = AMY1" / "CALCR + RAMP2 = AMY2" / "CALCR + RAMP3 = AMY3".
+Amber caution box heading "相似名称，需要区分" with exact line "CALCRL + RAMP3 = AM2" and annotation "AM2 与 AMY3 使用不同受体核心".
+No arrows from AM2 into AMY3.
+
+BOTTOM: two parallel function cards with tasteful small bone/osteoclast illustration and islet-brainstem/stomach illustration, not direct one-to-one molecular causal arrows:
+Card 1 heading "骨与钙调节"; body "CALCR 轴：破骨细胞、骨吸收与骨重塑"; small note "不可自动归为 AMY3 专属功能".
+Card 2 heading "进食与餐后调节"; body "胰淀素系统：饱腹、胃排空与胰高血糖素"; small note "动物回路与人体药效分别解读".
+
+BOTTOM emphasis banner exact: "受体组合 × 配体谱 × 细胞背景 × 暴露时间 → 功能输出"
+Bottom readable note: "鲑降钙素与 Cagrilintide 均不是 AMY3 专属工具。"
+Legend exact: "实线箭头：作用方向    虚线：依赖情境的联系"
+Footer exact: "概念示意：不表示完整通路、定量强弱或单一组织中的全部机制。"
+
+Accuracy and lettering constraints: CALCR is distinct from CALCRL; RAMP3 never substitutes for the seven-transmembrane core; preserve every label and Chinese annotation legibly; no misrendered Chinese, no extra text, no fabricated curves, no clinical approval or weight-loss efficacy claims. Make each visual relation unambiguous and easy to scan.
+
+
+FINAL CONNECTOR CORRECTION (built-in image edit):
+Edit this scientific mechanism image. Preserve its style, overall layout, all Chinese and Latin labels, both receptor structures, all tables and bottom function cards. Correct only the pathway connectors in the middle:
+1. The left CALCR receptor AND the right AMY3 receptor complex must BOTH feed into the SAME Gs node. Place the shared Gs node centered below the receptors if needed; use a converging connector from the two receptors leading to Gs, then show Gs → 腺苷酸环化酶 → cAMP 升高. The AMY3 connector must NOT terminate directly at cAMP.
+2. DELETE the dashed arrow from cAMP 升高 to the box “Gq / PLC / Ca²⁺、ERK：依赖细胞背景与配体”. That box is a separate context annotation, NOT downstream of cAMP. Keep the box text exactly unchanged but make it an unconnected dashed-outline annotation, with NO arrow connecting it to cAMP or to Gs.
+Maintain highly readable precise Chinese lettering and all other scientific limitations, structure labels, title, tissues, footer. No new content.

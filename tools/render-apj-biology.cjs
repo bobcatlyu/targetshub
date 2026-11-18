@@ -1,0 +1,20 @@
+const fs = require('fs');
+const vm = require('vm');
+const path = require('path');
+const root = path.resolve(__dirname, '..');
+const app = fs.readFileSync(path.join(root, 'assets/app.js'), 'utf8');
+const lines = app.split('\n');
+const context = {SITE:{root:'../../'}};
+vm.createContext(context);
+vm.runInContext(fs.readFileSync(path.join(root, 'assets/data.js'), 'utf8'), context);
+vm.runInContext(['const e=', 'const icon=', 'const refs='].map(prefix => lines.find(l => l.startsWith(prefix))).join('\n') + '\n' + app.slice(app.indexOf('function biologyMechanismMap'), app.indexOf('function detail(')), context);
+const biology = vm.runInContext('biologyContent(TARGET_ATLAS_DATA.targets.find(t=>t.id==="apj"))', context)
+  .replace(/href="#target\/([^/]+)\/([^\"]+)"/g, 'href="../../targets/$1/#$2"');
+const targetPath = path.join(root, 'targets/apj/index.html');
+let html = fs.readFileSync(targetPath, 'utf8');
+const start = html.indexOf('<div class="biology-expanded">');
+const end = html.indexOf('<div class="distinction">', start);
+if (start < 0 || end < 0) throw Error('APJ static biology boundaries not found');
+html = html.slice(0, start) + biology + html.slice(end);
+fs.writeFileSync(targetPath, html);
+console.log('Rendered APJ static biology with four visual groups and nine layered sections.');

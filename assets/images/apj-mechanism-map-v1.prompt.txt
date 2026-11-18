@@ -1,0 +1,33 @@
+Use case: scientific-educational.
+Asset type: final labeled raster mechanism map for the APJ Target Biology section of a Chinese scientific website.
+Primary request: Produce a beautifully clear, publication-style original biological mechanism illustration, landscape approximately 2400 x 1800 pixels. ALL labels and explanatory Chinese annotations must be directly rendered INSIDE the image. This is a scientific diagram, not a website screenshot.
+Style: sophisticated flat biomedical editorial illustration with subtle depth on protein helices, crisp thin connectors, lots of clean warm-white space (#fcfdf9); forest teal #386c60, muted sage, desaturated blue #456e97, restrained amber #b26739. Dark legible sans-serif text. No decorative clutter, no watermark, no logos. Text must be perfectly readable and correct, use the exact strings below. Main text substantially larger than footnotes.
+
+Composition and exact scientific content:
+TOP title: "APJ / APLNR 机制图"
+Subtitle: "从配体输入、信号选择到组织功能"
+
+UPPER THIRD: an elegant horizontal phospholipid bilayer, label "细胞膜", extracellular space "胞外", cytoplasmic space "胞内". A large central APJ receptor is drawn as SEVEN transmembrane helices, labeled "APJ / APLNR" and "七跨膜 GPCR". Above it two distinct small peptide illustrations with independent converging arrows into the receptor: "Apelin" and "ELA / APELA". Below these labels, small note "两类内源性肽配体". On upper right, separate amber double-headed horizontal stretching arrows on the membrane labeled "机械牵张" and "特定心肌与压力负荷模型". Show that mechanical stimulus acts on the receptor, not on the peptides. No generic cell nucleus.
+
+MIDDLE THIRD: Three clearly separated visual zones, approximately equal widths, with numbered section headings. Branch connectors must not cross or obscure text.
+LEFT teal zone heading "01 配体激活与信号选择".
+From APJ draw a solid teal activation arrow to a small G-protein illustration labeled "Gi/o". From Gi/o draw a connector ending in a clear T-shaped INHIBITION bar at "腺苷酸环化酶". Then a downward arrow to label "cAMP 生成下降". A separate optional dashed branch from receptor/Gi signaling reaches "ERK / Akt" with annotation "可连接的信号输出". At the bottom of this zone, a small disconnected pale box labeled "Gq 与 β-arrestin 相关信号" and second line "依赖配体、受体伙伴与细胞背景". Do not draw a solid universal pathway to Gq.
+
+CENTER blue zone heading "02 受体运输与适应".
+Draw a small receptor internalization vesicle illustration and a curved return-to-membrane arrow, clear labels "内吞" and "恢复". The input from receptor is dashed context-dependent. Below the drawing add "GRK 与内吞装置参与". Another distinct small text annotation must read "内吞与脱敏可分离". A small bottom note: "β-arrestin1 并非所有模型的内吞必需因子". Absolutely do NOT illustrate β-arrestin as universally required for APJ endocytosis.
+
+RIGHT amber zone heading "03 机械感受".
+A dashed amber connector from the membrane stretch/receptor to "β-arrestin 相关输出", then a solid arrow to a modest cardiomyocyte illustration labeled "心肌肥厚相关反应".
+Annotation immediately below: "证据来自特定心肌与压力负荷模型".
+Do not connect this mechanical branch to Gi/o or assert β-arrestin always causes hypertrophy in all tissues.
+
+BOTTOM QUARTER: A separated row of three gentle cards, no direct solid arrows from middle signaling nodes to these cards. Heading "组织与器官功能 · 非固定串联通路". Small tasteful scientific organ/tissue icons, no gross anatomical photorealism.
+Card 1 simple heart and vessel illustration: "心肌与血管" / "收缩与血管反应" / "依赖内皮状态和组织背景".
+Card 2 hypothalamus-kidney water balance illustration: "水分平衡" / "AVP 回路与排水调节" / "受水合状态与神经内分泌网络影响".
+Card 3 muscle bundle illustration: "代谢与肌肉" / "糖利用与肌肉适应" / "动物干预与人体观察分别解读".
+
+BOTTOM strong concise banner: "配体形式 × 细胞背景 × 刺激时间 → 功能输出"
+BOTTOM small but readable legend with clear matching symbols: "→ 作用方向    ┤ 抑制    虚线：依赖情境的联系"
+Very bottom small annotation: "概念示意：各分支不一定在同一细胞同时发生；不表示定量强弱或完整分子网络。"
+
+Constraints: Render accurate simplified biological membrane and receptor structure; EXACTLY seven membrane-spanning receptor helices in main receptor. All Chinese annotations remain intact, no pseudo-Chinese, no gibberish, no missing strokes. No experimental curves, no invented data, no clinical efficacy claims, no bibliography clutter. The main objective is a coherent spatial biological mechanism image with embedded explanatory labels.

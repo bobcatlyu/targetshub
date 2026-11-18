@@ -1,0 +1,4 @@
+Edit this scientific mechanism image. Preserve its style, overall layout, all Chinese and Latin labels, both receptor structures, all tables and bottom function cards. Correct only the pathway connectors in the middle:
+1. The left CALCR receptor AND the right AMY3 receptor complex must BOTH feed into the SAME Gs node. Place the shared Gs node centered below the receptors if needed; use a converging connector from the two receptors leading to Gs, then show Gs → 腺苷酸环化酶 → cAMP 升高. The AMY3 connector must NOT terminate directly at cAMP.
+2. DELETE the dashed arrow from cAMP 升高 to the box “Gq / PLC / Ca²⁺、ERK：依赖细胞背景与配体”. That box is a separate context annotation, NOT downstream of cAMP. Keep the box text exactly unchanged but make it an unconnected dashed-outline annotation, with NO arrow connecting it to cAMP or to Gs.
+Maintain highly readable precise Chinese lettering and all other scientific limitations, structure labels, title, tissues, footer. No new content.
