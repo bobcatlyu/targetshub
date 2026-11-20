@@ -10,6 +10,7 @@ const c={document:{getElementById:n=>n==='site-config'?{textContent:JSON.stringi
 vm.createContext(c);vm.runInContext(fs.readFileSync(path.join(root,'assets/data.js'),'utf8'),c);vm.runInContext(app.slice(0,app.indexOf('function detail(')),c);
 for(const t of db.targets){
  const old=before.targets.find(o=>o.id===t.id);
+ if(old){
  assert.deepEqual(t.biology,old.biology,`${t.id}: original biology`);
  assert.deepEqual(t.biologyExpanded,old.biologyExpanded,`${t.id}: source date`);
  assert.deepEqual(t.sources,old.sources,`${t.id}: references and dates`);
@@ -18,17 +19,18 @@ for(const t of db.targets){
  t.products.forEach((p,i)=>{const strip=p=>{const o={...p};delete o.id;return o;};assert.deepEqual(strip(p),strip(old.products[i]),`${t.id}: product configuration`);});
  old.assays.forEach((a,i)=>{for(const k of Object.keys(a))if(!['id','resourceLinks','methodRefs','resourceGap'].includes(k))assert.deepEqual(t.assays[i][k],a[k],`${t.id}: original assay ${i} ${k}`);});
  if(['apj','calcr-amy3'].includes(t.id))assert.deepEqual(t.biologyReading,old.biologyReading,`${t.id}: existing grouped reading`);
+ }
  assert.equal(t.resourcesMode,'literature');
  assert.equal(t.biologyReading.topics.length,9);
  assert.deepEqual(t.biologyReading.groups.flatMap(g=>g.topics),[0,1,2,3,4,5,6,7,8]);
  const sourceIds=new Set(t.sources.map(s=>s.id));
  const checkRefs=ids=>(ids||[]).forEach(id=>assert(sourceIds.has(id),`${t.id}: source ${id}`));
  t.biology.forEach(b=>checkRefs(b.refs));
- t.biologyReading.topics.forEach(b=>{assert(b.key?.length);b.evidence.forEach(e=>checkRefs(e[2]));});
+ t.biologyReading.topics.forEach(b=>{assert(b.evidence.length>0);if(!old)assert(b.evidence.length>=2);b.evidence.forEach(e=>checkRefs(e[2]));});
  t.products.forEach(p=>{checkRefs([p.ref,...(p.relatedRefs||[])]);assert(t.assays.some(a=>a.resourceLinks.some(l=>l.productId===p.id)),`${t.id}: product not linked ${p.id}`);});
  t.assays.forEach(a=>{assert(a.id);checkRefs(a.refs);checkRefs(a.methodRefs);for(const l of a.resourceLinks)assert(t.products.some(p=>p.id===l.productId));});
  const html=fs.readFileSync(path.join(root,'targets',t.id,'index.html'),'utf8');
- assert.equal((html.match(/class="bio-keypoint"/g)||[]).length,9,`${t.id}: summaries`);
+ assert.equal((html.match(/class="bio-keypoint"/g)||[]).length,0,`${t.id}: no duplicate topic summaries`);
  assert.equal((html.match(/class="bio-topic-body"/g)||[]).length,9,`${t.id}: expanded bodies`);
  assert(!html.includes('展开原理与研究依据'));
  assert(!html.includes('class="product-list"'));
@@ -57,7 +59,7 @@ for(const t of db.targets){
   if(hash)assert(fs.readFileSync(dest,'utf8').includes(`id="${hash}"`),`${t.id}: broken anchor ${href}`);
  }
 }
-summary.checks=['Original biology, methods, product configurations, sources and source dates preserved','Nine summaries and expanded details per page','All products associated with methods and canonical anchors preserved','Every local target/source/product link resolves; no duplicate anchors','Static HTML matches the shared renderer','Existing APJ/CALCR reading content and mechanism flows preserved'];
+summary.checks=['Original biology, methods, product configurations, sources and source dates preserved','Nine expanded details per page, without duplicate topic summaries','All products associated with methods and canonical anchors preserved','Every local target/source/product link resolves; no duplicate anchors','Static HTML matches the shared renderer','Existing APJ/CALCR reading content and mechanism flows preserved'];
 fs.mkdirSync(path.join(root,'output/qa'),{recursive:true});
 fs.writeFileSync(path.join(root,'output/qa/sitewide-reading-20261118.json'),JSON.stringify(summary,null,2)+'\n');
 console.log(JSON.stringify(summary,null,2));

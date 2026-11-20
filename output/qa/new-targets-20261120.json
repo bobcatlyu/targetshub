@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-20",
+  "totalTargets": 112,
+  "added": [
+    "tslp",
+    "fgf21",
+    "thrb",
+    "nav18",
+    "ttr",
+    "apoc3",
+    "angptl3",
+    "inhbe",
+    "alk7",
+    "cldn6"
+  ],
+  "newTopics": 90,
+  "newMethods": 60,
+  "newProducts": 20,
+  "oldTargetsUnchanged": true,
+  "checks": [
+    "All 113 static navigation lists are sorted and complete",
+    "Ten text mechanism maps without generated image assets",
+    "All nine details precede evidence annotations",
+    "Existing target and drug data unchanged",
+    "New references, product links and representative drugs resolve"
+  ]
+}

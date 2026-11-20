@@ -31,3 +31,5 @@ for (const id of ids) {
   fs.writeFileSync(home,fs.readFileSync(home,'utf8').replace(/(<div class="metric"><b>)\d+(<\/b><span>技术资源<\/span>)/,(_match,a,b)=>a+String(total).padStart(2,'0')+b));
   console.log(id + ': rendered biology, method products and resources.');
 }
+// Regenerating one page may follow a global data/script change: version every entry.
+console.log('Asset versions: ' + JSON.stringify(require('./version-assets.cjs').versionAssets()));
